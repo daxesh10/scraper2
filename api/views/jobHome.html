@@ -1,0 +1,120 @@
+
+
+<style>
+    hr.shadow {
+  border:none;
+  height: 20px;
+ 	width: 90%;
+	height: 50px;
+	margin-top: 0;
+	border-bottom: 1px solid #1f1209;
+	box-shadow: 0 20px 20px -20px #333;
+  margin: -50px auto 10px; 
+}
+</style>
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Job Portal</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Trial Verison.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h1 class="w3-xlarge w3-text-teal"><b>Dev : {{author}}.</b></h1>
+  </div>
+
+<br>
+<br>
+<hr class="shadow">
+
+<button ng-init="showR=false" ng-click="showR =!showR" class="btn btn-primary">Register</button>
+<br>
+<br>
+<div ng-show="showR">
+<div signup></div>
+</div> 
+
+
+
+<br>
+<br>
+
+
+<!--form page-->
+    <div class="w3-row-padding" ng-controller="userCtrl">
+    
+    <div class="w3-col m3">
+      <label><i class="fa fa-calendar-o"></i> Email </label>
+      <input class="w3-input w3-border" type="text" ng-model="email" placeholder="Email">
+    </div>
+
+       <div class="w3-col m3">
+      <label><i class="fa fa-calendar-o"></i> Password </label>
+      <input class="w3-input w3-border" type="password" ng-model="password" placeholder="password">
+    </div>
+
+    <div class="w3-col m2">
+      <label><i class="fa fa-search"></i> submit</label>
+      <button class="w3-button w3-block w3-black" ng-click="signinWithEmail()">Login</button>
+    </div>
+    
+    <br>
+    <br>
+    <h4 style="color: orangered" ng-bind="error"></h4>
+    </div> 
+<!--end of from-->
+
+<!-- Photo grid (modal) -->
+<div class="w3-row-padding w3-padding-16">
+    
+    <!--Photo grid 1 -->
+    <div class="w3-third w3-margin-bottom">
+      <img src="https://cdn.lynda.com/course/595944/595944-636247477374032053-16x9.jpg" alt="linked" style="width:100%">
+      <div class="w3-container w3-Blue">
+        <h3>Linkedin Portal</h3>
+        <h6 class="w3-opacity">REAL TIME scrapping</h6>
+        <p>Supports ONE-CLICK APPLY</p>
+        <p>3 JOBS<sup>per second</sup></p>
+        <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
+        <button class="w3-button w3-block w3-black w3-margin-bottom">Connecting</button>
+      </div>
+    </div>
+
+    <!--Photo grid 2 -->
+    <div class="w3-third w3-margin-bottom">
+      <img src="http://recruitingdaily.com/wp-content/uploads/sites/6/2014/07/2014-07-16_10-00-26.png" alt="MONSTER" style="width:100%">
+      <div class="w3-container w3-Blue">
+        <h3>MONSTER Portal</h3>
+        <h6 class="w3-opacity">REAL TIME scrapping</h6>
+        <p>Supports ONE-CLICK APPLY</p>
+        <p>5 JOBS<sup>per second</sup></p>
+        <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
+        <button class="w3-button w3-block w3-black w3-margin-bottom">Connecting</button>
+      </div>
+    </div>
+
+       <!--Photo grid 2 -->
+    <div class="w3-third w3-margin-bottom">
+      <img src="https://res.cloudinary.com/betterteam/image/fetch/q_auto,f_auto/https://betterteam-resources.s3.amazonaws.com/resources/Posting-Jobs-On-Indeed.png" alt="INDEED" style="width:100%">
+      <div class="w3-container w3-Blue">
+        <h3>INDEED Portal</h3>
+        <h6 class="w3-opacity">REAL TIME scrapping</h6>
+        <p>Supports ONE-CLICK APPLY</p>
+        <p>4 JOBS<sup>per second</sup></p>
+        <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
+        <button class="w3-button w3-block w3-black w3-margin-bottom">Connecting</button>
+      </div>
+    </div>
+
+
+
+
+</div>   
+<!--End Photo grid (modal) -->
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w2-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-teal w3-large w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>

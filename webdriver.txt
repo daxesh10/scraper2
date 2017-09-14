@@ -1,0 +1,11 @@
+npm install --save selenium-webdriver
+npm install -g selenium-standalone@latest
+selenium-standalone install
+selenium-standalone start
+
+
+
+to start
+-> install selenium-standalone-server.jar file first
+-> change the path to jar file
+-> java -jar filename.jar

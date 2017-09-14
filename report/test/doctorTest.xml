@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="doctorTest"
+    errors="1" failures="0" hostname="" id="" package="test" skipped="0"
+    tests="1" time="1.518" timestamp="Tue, 20 Jun 2017 02:40:47 GMT">
+  
+    <testcase name="Doctors Map test " time="1.518" assertions="0">
+    </testcase>
+      <system-err>
+          Error while running [Test / Doctor Test / Doctors Map test ]:
+
+  TypeError: Cannot convert undefined or null to object
+    at F:\presentation\firebaseClient.js:35:16
+    at c (F:\presentation\node_modules\firebase-admin\lib\database\database.js:207:58)
+    at F:\presentation\node_modules\firebase-admin\lib\database\database.js:185:831
+    at tc (F:\presentation\node_modules\firebase-admin\lib\database\database.js:77:165)
+    at le (F:\presentation\node_modules\firebase-admin\lib\database\database.js:112:215)
+    at me (F:\presentation\node_modules\firebase-admin\lib\database\database.js:111:632)
+    at Object.G (F:\presentation\node_modules\firebase-admin\lib\database\database.js:240:93)
+    at F:\presentation\node_modules\firebase-admin\lib\database\database.js:223:503
+    at kh.h.ud (F:\presentation\node_modules\firebase-admin\lib\database\database.js:228:104)
+    at hg.ud (F:\presentation\node_modules\firebase-admin\lib\database\database.js:175:364)
+      </system-err>
+  
+  
+  </testsuite>
+</testsuites>

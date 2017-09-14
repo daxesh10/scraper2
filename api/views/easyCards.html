@@ -1,0 +1,60 @@
+                                    <div class="container"> 
+                                        <!--<h3>companyList</h3>-->
+
+                                            <div  ng-repeat="(key,val) in easylinksCompany">
+                                               <!--<h4> {{key + 1}} </h4> -->
+
+                                                    <div class="w3-container">
+
+                                                        <div class="w3-card-4" style="width:50%;">
+                                                            
+                                                            <header class="w3-container w3-blue">
+                                                            <div style="display: inline">    
+                                                            <h5 class="element1"> {{key + 1}}. </h5>     
+                                                            <h1 class="element2" ng-bind="val['companyName']"></h1>
+                                                            </div>
+                                                            </header>
+
+                                                              <div class="w3-container"> 
+                                                              <img class="element1" ng-src="{{val['companyLogo']}}" alt="logo" class="w3-left w3-circle">                                                                 
+                                                              <!--<code class="element1">Title:</code>-->
+                                                              <h4 class='element2' ng-bind="val['companyTitle']"></h4>                                                                                                                         
+                                                              </div>
+
+                                                              <hr>
+                                                              <div class="w3-container">                                                              
+                                                              <code class="element1">Date posted:</code>
+                                                              <h4 class='element2' ng-bind="val['companyPostDate']"></h4>                                                                                                                         
+                                                              </div>
+
+                                                              <div class="w3-container">                                                              
+                                                              <code class="element1">location:</code>
+                                                              <h4 class='element2' ng-bind="val['companyLocation']"></h4>                                                                                                                         
+                                                              </div>
+
+
+                                                              <div class="w3-container">
+                                                              <code class="element1">Description:</code>
+                                                              <h6 class="element2" ng-bind="val['companyDes']"></h6>
+                                                               </div>
+
+                                                               
+
+                                                               <footer class="w3-container w3-teal">
+                                                                <a  ng-href="{{val['link']}}"><button class="w3-button w3-block w3-dark-grey">+ Connect</button></a>
+                                                                </footer>
+
+                                                        </div>    
+
+                                                    </div>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+
+                                               
+                                            
+                                            
+                                            
+                                            </div>
+                                          </div>  

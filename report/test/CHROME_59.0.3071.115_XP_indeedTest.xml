@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="5"
+            failures="0"
+            tests="1">
+
+  <testsuite name="indeedTest"
+    errors="5" failures="0" hostname="" id="" package="test" skipped="0"
+    tests="1" time="888.9" timestamp="Fri, 07 Jul 2017 05:15:02 GMT">
+  
+    <testcase name="demo test for indeed " time="888.9" assertions="30">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+      <system-err>
+        ERROR: Unable to locate element: &quot;button:last-child&quot; using: css selector
+    at Object.browser.element.result (F:\presentation\pages\indeedPage.js:600:86)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\daxes\AppData\Roaming\npm\node_modules\nightwatch\lib\index.js:358:18)
+    at emitTwo (events.js:106:13)
+    at HttpRequest.emit (events.js:191:7)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\daxes\AppData\Roaming\npm\node_modules\nightwatch\lib\index.js:385:15)
+    at emitThree (events.js:116:13)
+    at HttpRequest.emit (events.js:194:7)
+    at IncomingMessage.&lt;anonymous&gt; (C:\Users\daxes\AppData\Roaming\npm\node_modules\nightwatch\lib\http\request.js:159:16)
+    at emitNone (events.js:91:20)
+    at IncomingMessage.emit (events.js:185:7)
+ERROR: Unable to locate element: &quot;button:last-child&quot; using: css selector
+    at Object.browser.element.result (F:\presentation\pages\indeedPage.js:600:86)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\daxes\AppData\Roaming\npm\node_modules\nightwatch\lib\index.js:358:18)
+    at emitTwo (events.js:106:13)
+    at HttpRequest.emit (events.js:191:7)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\daxes\AppData\Roaming\npm\node_modules\nightwatch\lib\index.js:385:15)
+    at emitThree (events.js:116:13)
+    at HttpRequest.emit (events.js:194:7)
+    at IncomingMessage.&lt;anonymous&gt; (C:\Users\daxes\AppData\Roaming\npm\node_modules\nightwatch\lib\http\request.js:159:16)
+    at emitNone (events.js:91:20)
+    at IncomingMessage.emit (events.js:185:7)
+ERROR: Unable to locate element: &quot;button:last-child&quot; using: css selector
+    at Object.browser.element.result (F:\presentation\pages\indeedPage.js:600:86)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\daxes\AppData\Roaming\npm\node_modules\nightwatch\lib\index.js:358:18)
+    at emitTwo (events.js:106:13)
+    at HttpRequest.emit (events.js:191:7)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\daxes\AppData\Roaming\npm\node_modules\nightwatch\lib\index.js:385:15)
+    at emitThree (events.js:116:13)
+    at HttpRequest.emit (events.js:194:7)
+    at IncomingMessage.&lt;anonymous&gt; (C:\Users\daxes\AppData\Roaming\npm\node_modules\nightwatch\lib\http\request.js:159:16)
+    at emitNone (events.js:91:20)
+    at IncomingMessage.emit (events.js:185:7)
+ERROR: Unable to locate element: &quot;button:last-child&quot; using: css selector
+    at Object.browser.element.result (F:\presentation\pages\indeedPage.js:600:86)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\daxes\AppData\Roaming\npm\node_modules\nightwatch\lib\index.js:358:18)
+    at emitTwo (events.js:106:13)
+    at HttpRequest.emit (events.js:191:7)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\daxes\AppData\Roaming\npm\node_modules\nightwatch\lib\index.js:385:15)
+    at emitThree (events.js:116:13)
+    at HttpRequest.emit (events.js:194:7)
+    at IncomingMessage.&lt;anonymous&gt; (C:\Users\daxes\AppData\Roaming\npm\node_modules\nightwatch\lib\http\request.js:159:16)
+    at emitNone (events.js:91:20)
+    at IncomingMessage.emit (events.js:185:7)
+ERROR: Unable to locate element: &quot;button:last-child&quot; using: css selector
+    at Object.browser.element.result (F:\presentation\pages\indeedPage.js:600:86)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\daxes\AppData\Roaming\npm\node_modules\nightwatch\lib\index.js:358:18)
+    at emitTwo (events.js:106:13)
+    at HttpRequest.emit (events.js:191:7)
+    at HttpRequest.&lt;anonymous&gt; (C:\Users\daxes\AppData\Roaming\npm\node_modules\nightwatch\lib\index.js:385:15)
+    at emitThree (events.js:116:13)
+    at HttpRequest.emit (events.js:194:7)
+    at IncomingMessage.&lt;anonymous&gt; (C:\Users\daxes\AppData\Roaming\npm\node_modules\nightwatch\lib\http\request.js:159:16)
+    at emitNone (events.js:91:20)
+    at IncomingMessage.emit (events.js:185:7)
+      </system-err>
+  
+  
+  </testsuite>
+</testsuites>

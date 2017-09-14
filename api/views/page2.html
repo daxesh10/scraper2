@@ -1,0 +1,60 @@
+ <div class="page-header">
+        <h2> scraping {{x}} ....! </h2>
+    </div>
+
+<!--<pre ng-repeat="de in det track by $index">{{de}}</pre>-->
+
+
+<div class="container">
+<pre ng-repeat="de in det track by $index" ng-if="de.name">
+    
+<table class="table table-bordered">
+<tr><td><h3> name : {{de.name}} </h3></td></tr>
+<tr><td><h3> email : {{de.email}} </h3></td></tr>
+<tr><td><h3> phone: : {{de.phone}} </h3></td></tr>
+<tr><td><h3> docAddress : {{de.docAddress}} </h3></td></tr>
+<tr><td><h3> streetAddress : {{de.address.region}} </h3></td></tr>
+<tr><td><h3> addressLocality : {{de.address.local}} </h3></td></tr>
+<tr><td><h3> postalCode : {{de.postalCode}} </h3></td></tr>
+
+<tr><td><h3> #facebook : {{de.facebook}} </h3></td></tr>
+<tr><td><h3> #twitter : {{de.twitter}} </h3></td></tr>
+<tr><td><h3> #instagram : {{de.instagram}} </h3></td></tr>
+<tr><td><h3> #website : {{de.website}} </h3></td></tr>
+
+<tr><td><h3> mapLink : <a ng-href="de.mapLink" >{{de.mapLink}}</a></h3></td></tr>
+
+<tr><td><h3> #DETAILS : <p>{{de.detailInfo}}</p> </h3></td></tr>
+<tr><td><h3> #users : <p  ng-repeat="user in de.users"> <a ng-href="{{user.url}}"> {{user.name}}</a></p> </h3></td></tr>
+
+<br>
+<br>
+<tr><td ng-init="de.jsonShow=true"><a ng-click="de.jsonShow = !de.jsonShow"><h4><strong> #JSON  :</strong></h4></a> <p ng-show="de.jsonShow">{{de | json}}</p> </h3></td></tr>
+<br>
+
+</table>
+
+<div>
+<span ng-repeat="day in de.dayOfWeek"><h3> {{day.day}} :| {{day.open}} - {{day.close}} </h3></span>
+<img ng-src="{{de.logoImage}}" style="max-width: 400px;max-width: 400px" alt="{{de.name}}" />
+</div>
+
+</pre>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

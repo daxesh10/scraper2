@@ -1,0 +1,10 @@
+ <!--<div class="page-header">
+        <h1> web scraper </h1>
+    </div>-->
+<div class="container" ng-controller="DeliveryCtrl">
+
+<ul>
+    <li ng-repeat="loc in dloc"><a ng-href="#!delivery/{{loc}}" ng-click="getLoc(loc)">{{loc}}</li>
+</ul>
+
+</div>

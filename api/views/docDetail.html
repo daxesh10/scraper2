@@ -1,0 +1,83 @@
+
+
+<div class="container">
+<pre ng-repeat="de in det track by $index" ng-if="de.name">
+    
+<table class="table table-bordered">
+<tr><td><h3> name : {{de.name}} </h3></td></tr>
+<tr><td><h3> email : {{de.email}} </h3></td></tr>
+<tr><td><h3> phone: : {{de.phone}} </h3></td></tr>
+<tr><td><h3> docAddress : {{de.docAddress}} </h3></td></tr>
+<tr><td><h3> streetAddress : {{de.address.region}} </h3></td></tr>
+<tr><td><h3> addressLocality : {{de.address.local}} </h3></td></tr>
+<tr><td><h3> postalCode : {{de.postalCode}} </h3></td></tr>
+
+<tr><td><h3> #facebook : {{de.facebook}} </h3></td></tr>
+<tr><td><h3> #twitter : {{de.twitter}} </h3></td></tr>
+<tr><td><h3> #instagram : {{de.instagram}} </h3></td></tr>
+<tr><td><h3> #website : {{de.website}} </h3></td></tr>
+
+<tr><td><h3> mapLink : <a ng-href="de.mapLink" >{{de.mapLink}}</a></h3></td></tr>
+
+<tr><td><h3> #DETAILS : <p>{{de.detailInfo}}</p> </h3></td></tr>
+<tr><td><h3> #users : <p  ng-repeat="user in de.users"> <a ng-href="{{user.url}}"> {{user.name}}</a></p> </h3></td></tr>
+
+<br>
+<br>
+<tr><td ng-init="de.jsonShow=true"><a ng-click="de.jsonShow = !de.jsonShow"> #JSON  :</a> <p ng-show="de.jsonShow">{{de | json}}</p> </h3></td></tr>
+<br>
+
+</table>
+
+<div>
+<span ng-repeat="day in de.dayOfWeek"><h3> {{day.day}} :| {{day.open}} - {{day.close}} </h3></span>
+<img ng-src="{{de.logoImage}}" style="max-width: 400px;max-width: 400px" alt="{{de.name}}" />
+</div>
+
+</pre>
+
+</div>
+
+
+
+
+
+
+
+
+<!--<div class="container">
+
+    <pre ng-repeat="de in det track by $index" ng-if="de.name"> 
+       
+       
+       <h3><span class="label label-primary" ng-if="de.name">name</span> {{de.name}} </h3>
+        <h3><span class="label label-primary" ng-if="de.email">email</span> {{de.email}} </h3>
+        <h3><span class="label label-primary" ng-if="de.phone">phone</span> {{de.phone}} </h3>
+        <h3><span class="label label-primary" ng-if="de.docAddress">address</span> {{de.docAddress}} </h3>
+        
+       <h3><span class="label label-primary" ng-if="de.address">address</span> <p> {{de.address.local}}  {{de.address.region}} </p></h3>
+       <h3><span class="label label-primary" ng-if="de.dayOfWeek">dayOfWeek</span> <div ng-repeat="day in de.dayOfWeek"><h4 ng-if="day" ng-bind="day"></h4></div> </h3>
+       
+      <code ng-if="de.facebook">social</code>
+        <h3><span class="label label-primary" ng-if="de.facebook">facebook:: </span> {{de.facebook}} </h3>
+       <h3><span class="label label-primary" ng-if="de.twitter">twitter:: </span> {{de.twitter}} </h3>
+       <h3><span class="label label-primary" ng-if="de.instagram">instagram:: </span> {{de.instagram}} </h3>
+       <h3><span class="label label-primary" ng-if="de.website">website: </span> {{de.website}} </h3>
+      
+      <h3><span class="label label-primary" ng-if="de.email">logo</span> </h3> <img src="{{de.logoImage}}" style="max-height: 333px;max-width: 333px"/>
+      
+       <code>DETAILS</code>
+       <P ng-if="de.detailInfo" ng-bind="de.detailInfo"></P>
+        <code>Users</code>
+       <div ng-if="de.users"  ng-repeat="user in de.users"><br><h4>{{user.name}}</h4><h4>{{user.url}}</h4></div>
+       
+       </pre>
+
+    
+
+
+<br>
+<br>
+
+
+</div>-->

@@ -1,0 +1,15 @@
+{
+    "date": "Mon, 15 May 2017 02:18:57 GMT",
+    "server": "Apache",
+    "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+    "cache-control": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+    "pragma": "no-cache",
+    "set-cookie": [
+        "ci_csrf_token=4335c6c1635ef138773fe2632e00e8ac; expires=Mon, 15-May-2017 04:18:57 GMT; Max-Age=7200; path=/",
+        "bf_session=f909f8970bd354b59cc115f26b5dc9e3e98471d3; expires=Mon, 15-May-2017 04:18:57 GMT; Max-Age=7200; path=/; HttpOnly"
+    ],
+    "vary": "User-Agent,Accept-Encoding",
+    "content-length": "43603",
+    "connection": "close",
+    "content-type": "text/html; charset=UTF-8"
+}

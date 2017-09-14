@@ -1,0 +1,579 @@
+<div class="wm-toolbar-category-option ng-binding ng-scope selected" ng-repeat="category in categories" ng-click="selectCategory(category)" ng-class="{ selected: currentCategory(category) }" role="filter-option">
+                All Categories
+              </div><div class="wm-toolbar-category-option ng-binding ng-scope" ng-repeat="category in categories" ng-click="selectCategory(category)" ng-class="{ selected: currentCategory(category) }" role="filter-option">
+                Indica
+              </div><div class="wm-toolbar-category-option ng-binding ng-scope" ng-repeat="category in categories" ng-click="selectCategory(category)" ng-class="{ selected: currentCategory(category) }" role="filter-option">
+                Sativa
+              </div><div class="wm-toolbar-category-option ng-binding ng-scope" ng-repeat="category in categories" ng-click="selectCategory(category)" ng-class="{ selected: currentCategory(category) }" role="filter-option">
+                Hybrid
+              </div><div class="wm-toolbar-category-option ng-binding ng-scope" ng-repeat="category in categories" ng-click="selectCategory(category)" ng-class="{ selected: currentCategory(category) }" role="filter-option">
+                Extract
+              </div><div class="wm-toolbar-category-option ng-binding ng-scope" ng-repeat="category in categories" ng-click="selectCategory(category)" ng-class="{ selected: currentCategory(category) }" role="filter-option">
+                Edible
+              </div><div class="wm-toolbar-category-option ng-binding ng-scope" ng-repeat="category in categories" ng-click="selectCategory(category)" ng-class="{ selected: currentCategory(category) }" role="filter-option">
+                Topicals
+              </div><div class="wm-toolbar-category-option ng-binding ng-scope" ng-repeat="category in categories" ng-click="selectCategory(category)" ng-class="{ selected: currentCategory(category) }" role="filter-option">
+                Grow
+              </div><div class="wm-toolbar-category-option ng-binding ng-scope" ng-repeat="category in categories" ng-click="selectCategory(category)" ng-class="{ selected: currentCategory(category) }" role="filter-option">
+                Gear
+              </div><div class="wm-toolbar-category-option ng-binding ng-scope" ng-repeat="category in categories" ng-click="selectCategory(category)" ng-class="{ selected: currentCategory(category) }" role="filter-option">
+                Preroll
+              </div><div class="wm-menu-category ng-scope" ng-repeat="category in sectionCategories" ng-if="categoryVisible(category)" data-ng-animate="2">
+        <div class="wm-menu-categories">
+          <div class="wm-menu-category-tools">
+            <div class="wm-menu-category-title-tool">
+              <h3 class="ng-binding">Indica (15)</h3>
+              <!-- ngIf: canEdit() -->
+            </div>
+            <div class="wm-menu-category-sort-tool">
+              <div class="wm-menu-current-sort noselect ng-binding" ng-click="clickSortDropdown($event, category)">
+                Highest Eighth Price
+                <i class="fa fa-caret-down pull-right caret-pos-fix"></i>
+                <div class="wm-menu-category-dropdown ng-hide" ng-show="sortOptions[category].sortDropdownOpen">
+                  <div class="wm-menu-category-sorts">
+                    <!-- ngIf: sortOptions[category].hasCannabinoids -->
+                    <div class="wm-menu-category-sorts-price">
+                      <div class="wm-menu-category-sort-label">Highest Price</div>
+                      <div class="wm-menu-category-sort-options">
+                        <!-- ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1G
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          2G
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope selected" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/8
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/4
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/2
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          OZ
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices -->
+                      </div>
+                      <div class="wm-menu-category-sort-label">Lowest Price</div>
+                      <div class="wm-menu-category-sort-options">
+                        <!-- ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1G
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          2G
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/8
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/4
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/2
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          OZ
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ngIf: sortOptions[category].prices.length > 2 --><button ng-click="togglePrice(category)" class="compare-btn ng-binding ng-scope" ng-if="sortOptions[category].prices.length &gt; 2" ng-class="{active : showAllPrices[category] &amp;&amp; activeCategory === category}">
+                SHOW ALL PRICES
+              </button><!-- end ngIf: sortOptions[category].prices.length > 2 -->
+            </div>
+          </div>
+
+          <div class="wm-menu-items" id="Indica" in-view-container="">
+            <!-- !IMPORTANT DONT ADD FILTERS or ORDERBY through ng-repeat:  FILTER from selectSort function in wm-menu.directive.js -->
+            <!-- ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id -->
+
+          </div>
+        </div>
+      </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1G
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          2G
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope selected" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/8
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/4
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/2
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          OZ
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1G
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          2G
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/8
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/4
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/2
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          OZ
+                        </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="wm-menu-category ng-scope" ng-repeat="category in sectionCategories" ng-if="categoryVisible(category)" data-ng-animate="2">
+        <div class="wm-menu-categories">
+          <div class="wm-menu-category-tools">
+            <div class="wm-menu-category-title-tool">
+              <h3 class="ng-binding">Sativa (5)</h3>
+              <!-- ngIf: canEdit() -->
+            </div>
+            <div class="wm-menu-category-sort-tool">
+              <div class="wm-menu-current-sort noselect ng-binding" ng-click="clickSortDropdown($event, category)">
+                Highest Eighth Price
+                <i class="fa fa-caret-down pull-right caret-pos-fix"></i>
+                <div class="wm-menu-category-dropdown ng-hide" ng-show="sortOptions[category].sortDropdownOpen">
+                  <div class="wm-menu-category-sorts">
+                    <!-- ngIf: sortOptions[category].hasCannabinoids -->
+                    <div class="wm-menu-category-sorts-price">
+                      <div class="wm-menu-category-sort-label">Highest Price</div>
+                      <div class="wm-menu-category-sort-options">
+                        <!-- ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1G
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          2G
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope selected" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/8
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/4
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/2
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          OZ
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices -->
+                      </div>
+                      <div class="wm-menu-category-sort-label">Lowest Price</div>
+                      <div class="wm-menu-category-sort-options">
+                        <!-- ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1G
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          2G
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/8
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/4
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/2
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          OZ
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ngIf: sortOptions[category].prices.length > 2 --><button ng-click="togglePrice(category)" class="compare-btn ng-binding ng-scope" ng-if="sortOptions[category].prices.length &gt; 2" ng-class="{active : showAllPrices[category] &amp;&amp; activeCategory === category}">
+                SHOW ALL PRICES
+              </button><!-- end ngIf: sortOptions[category].prices.length > 2 -->
+            </div>
+          </div>
+
+          <div class="wm-menu-items" id="Sativa" in-view-container="">
+            <!-- !IMPORTANT DONT ADD FILTERS or ORDERBY through ng-repeat:  FILTER from selectSort function in wm-menu.directive.js -->
+            <!-- ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id -->
+
+          </div>
+        </div>
+      </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1G
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          2G
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope selected" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/8
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/4
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/2
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          OZ
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1G
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          2G
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/8
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/4
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/2
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          OZ
+                        </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="wm-menu-category ng-scope" ng-repeat="category in sectionCategories" ng-if="categoryVisible(category)" data-ng-animate="2">
+        <div class="wm-menu-categories">
+          <div class="wm-menu-category-tools">
+            <div class="wm-menu-category-title-tool">
+              <h3 class="ng-binding">Hybrid (7)</h3>
+              <!-- ngIf: canEdit() -->
+            </div>
+            <div class="wm-menu-category-sort-tool">
+              <div class="wm-menu-current-sort noselect ng-binding" ng-click="clickSortDropdown($event, category)">
+                Highest Eighth Price
+                <i class="fa fa-caret-down pull-right caret-pos-fix"></i>
+                <div class="wm-menu-category-dropdown ng-hide" ng-show="sortOptions[category].sortDropdownOpen">
+                  <div class="wm-menu-category-sorts">
+                    <!-- ngIf: sortOptions[category].hasCannabinoids -->
+                    <div class="wm-menu-category-sorts-price">
+                      <div class="wm-menu-category-sort-label">Highest Price</div>
+                      <div class="wm-menu-category-sort-options">
+                        <!-- ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1G
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          2G
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope selected" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/8
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/4
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/2
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          OZ
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices -->
+                      </div>
+                      <div class="wm-menu-category-sort-label">Lowest Price</div>
+                      <div class="wm-menu-category-sort-options">
+                        <!-- ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1G
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          2G
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/8
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/4
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/2
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          OZ
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ngIf: sortOptions[category].prices.length > 2 --><button ng-click="togglePrice(category)" class="compare-btn ng-binding ng-scope" ng-if="sortOptions[category].prices.length &gt; 2" ng-class="{active : showAllPrices[category] &amp;&amp; activeCategory === category}">
+                SHOW ALL PRICES
+              </button><!-- end ngIf: sortOptions[category].prices.length > 2 -->
+            </div>
+          </div>
+
+          <div class="wm-menu-items" id="Hybrid" in-view-container="">
+            <!-- !IMPORTANT DONT ADD FILTERS or ORDERBY through ng-repeat:  FILTER from selectSort function in wm-menu.directive.js -->
+            <!-- ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id -->
+
+          </div>
+        </div>
+      </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1G
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          2G
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope selected" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/8
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/4
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          1/2
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          OZ
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1G
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          2G
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/8
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/4
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          1/2
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          OZ
+                        </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="wm-menu-category ng-scope" ng-repeat="category in sectionCategories" ng-if="categoryVisible(category)" data-ng-animate="2">
+        <div class="wm-menu-categories">
+          <div class="wm-menu-category-tools">
+            <div class="wm-menu-category-title-tool">
+              <h3 class="ng-binding">Edible (36)</h3>
+              <!-- ngIf: canEdit() -->
+            </div>
+            <div class="wm-menu-category-sort-tool">
+              <div class="wm-menu-current-sort noselect ng-binding" ng-click="clickSortDropdown($event, category)">
+                Highest Price
+                <i class="fa fa-caret-down pull-right caret-pos-fix"></i>
+                <div class="wm-menu-category-dropdown ng-hide" ng-show="sortOptions[category].sortDropdownOpen">
+                  <div class="wm-menu-category-sorts">
+                    <!-- ngIf: sortOptions[category].hasCannabinoids -->
+                    <div class="wm-menu-category-sorts-price">
+                      <div class="wm-menu-category-sort-label">Highest Price</div>
+                      <div class="wm-menu-category-sort-options">
+                        <!-- ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope selected" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          EACH
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices -->
+                      </div>
+                      <div class="wm-menu-category-sort-label">Lowest Price</div>
+                      <div class="wm-menu-category-sort-options">
+                        <!-- ngRepeat: price in sortOptions[category].prices --><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          EACH
+                        </div><!-- end ngRepeat: price in sortOptions[category].prices -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ngIf: sortOptions[category].prices.length > 2 -->
+            </div>
+          </div>
+
+          <div class="wm-menu-items" id="Edible" in-view-container="">
+            <!-- !IMPORTANT DONT ADD FILTERS or ORDERBY through ng-repeat:  FILTER from selectSort function in wm-menu.directive.js -->
+            <!-- ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id --><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><!-- end ngRepeat: item in newMenu[category] track by item.id -->
+
+          </div>
+        </div>
+      </div><div class="wm-menu-category-sort-option ng-binding ng-scope selected" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price, true)" ng-class="{ selected: isCurrentSort(category, price, true) }">
+                          EACH
+                        </div><div class="wm-menu-category-sort-option ng-binding ng-scope" ng-repeat="price in sortOptions[category].prices" ng-click="selectSort(category, price)" ng-class="{ selected: isCurrentSort(category, price) }">
+                          EACH
+                        </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div><div class="menu-item-wrapper ng-scope" in-view="item.visible = $inview" ng-repeat="item in newMenu[category] track by item.id">
+              <!-- ngIf: item.visible -->
+             </div>

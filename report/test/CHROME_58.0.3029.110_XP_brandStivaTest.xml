@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="brandStivaTest"
+    errors="0" failures="1" hostname="" id="" package="test" skipped="0"
+    tests="1" time="11.28" timestamp="Tue, 20 Jun 2017 22:30:12 GMT">
+  
+    <testcase name="Doctors brand Indica " time="11.28" assertions="2">
+
+      <failure message="Timed out while waiting for element &lt;wm-brand-card&gt; to be present for 4000 milliseconds.">    at Object.loadBrandStavia (F:\presentation\pages\Homepage.js:428:22)
+    at Object.Doctors brand Indica  (F:\presentation\test\brandStivaTest.js:11:11)</failure>
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>

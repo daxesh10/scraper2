@@ -1,0 +1,39 @@
+hr.shadow {
+  border:none;
+  height: 20px;
+ 	width: 90%;
+	height: 50px;
+	margin-top: 0;
+	border-bottom: 1px solid #1f1209;
+	box-shadow: 0 20px 20px -20px #333;
+  margin: -50px auto 10px; 
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('https://cdn.lynda.com/course/595944/595944-636247477374032053-16x9.jpg');
+    min-height: 100%;
+}
+
+.bgimg-2 {
+    background-image: url('https://www.bram.us/wordpress/wp-content/uploads/2013/08/slimerjs-560x314.jpg');
+    min-height: 100%;
+}
+
+
+
+footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style> 
+.element1 {display:inline-block;margin-right:10px;} 
+.element2 {display:inline-block;} 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+}
+
+header {background: black;color:white;}
+footer {background: #aaa;color:white;}
+.nav {background:#eee;}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.nav ul a {
+    text-decoration: none;
+}
+
+
+
+
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}
+@media screen and (min-width: 220px) and (max-width: 680px){
+
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+    #cards,#easycards{-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+
+}
+
+
+</style>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+        <script src="/client/js/app.js"></script>
+
+</head>
+<body ng-app="fbApp" ng-controller="ctrl1">
+
+
+<div class="container">
+    <button ng-click="clickLinkedin()">Linkedin</button>
+    <button ng-click="clickIndeed()">Indeed</button>
+    <button ng-click="clickMonster()">Monster</button>
+
+</div>
+
+
+{{data}}
+
+
+<div class="flex-container">
+<header>
+<h1 class="md-display-2 w3-tag" ng-if="!heading">JOBs Listings</h1>
+<h1 class="md-display-2 w3-tag">{{heading}}</h1>
+</header>
+
+<nav class="nav">
+       
+         <ul class="list-group">
+              <li ng-repeat="(key,value) in jobLocations as j track by $index" ng-init="showJobTitles=false" ng-click="showJobTitles=!showJobTitles" class="list-group-item list-group-item-success">{{key}}
+
+                    <ol ng-show="showJobTitles" ng-init="showJobList=false">
+                        <!--ng-click="jobListing(jobLocations[key][ke])-->
+                        <li ng-repeat="(jobTypeKey,jobTypeVal) in jobLocations[key]">
+                            <a href="javascript:;"  ng-click="jobListing(jobLocations[key][jobTypeKey])"> {{jobTypeKey}} </a>
+                    
+                            
+                           
+                           </li>
+                            </ol>
+                    
+              </li>
+                    </ul>
+
+<!--                  
+                  <div>
+                  <a ng-href="#!jobs/" ng-init="showJobTitles=false" ng-click="showJobTitles=!showJobTitles" ng-bind="jobLocations[key] | json"></a>
+                  </div>-->
+              
+                  
+                    <!--<ol>
+                    <li ng-show="showJobTitles" ng-repeat="jobTitle in joblocs"><a ng-href="#!{{joblocs}}/{{jobTitle}}">{{jobTitle}}</a></li>                
+                    </ol>-->
+                   
+          
+</nav>
+
+<article class="article">
+  
+ <div ng-show="showJobList">
+
+<div class="w3-bar w3-teal">
+  <button class="w3-bar-item w3-button" ng-repeat="(jobListKey,jobListValue) in jobList"  ng-click="showListedJobs(jobList[jobListKey],jobListKey)">{{jobListKey}}</button>
+</div>                            
+                                    
+                                 <div ng-if="jobListingKey==='company'">                                 
+                                 <div id="cards" cards></div>                                 
+                                 </div>
+
+
+
+
+
+                                    
+
+                                    <div ng-if="jobListingKey==='easyLinks'">
+                                         <div id="easycards" easycards></div>
+                                    </div>
+
+
+ </div>
+
+
+            <!--<ul>
+                <li ng-repeat="(jobListKey,jobListValue) in jobList"><a ng-click="showListedJobs(jobList[jobListKey],jobListKey)">{{jobListKey}}</a></li>
+            </ul>-->
+
+        
+
+ 
+
+
+
+
+
+
+
+  <h1> Linkedin scraper </h1>
+  <p>Using nightwatch,cheerio,nightmare and other npm modules.</p>
+  <p>this scraper is capable enough to scrap as many job listing page from Linkedin.</p>
+  <p><strong>click on job locations on right side!</strong></p>
+  <p><strong>Then on company or easyLinks,</strong></p>
+  
+  <strong><h4>Good Luck !!</h4><h5>Auto Applying comming soon..!</h5></strong>
+
+ 
+
+
+</article>
+
+<footer>Copyright &copy; Heroku Node.HerokuApp </footer>
+</div>
+
+</body>
+</html>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+
+
+  

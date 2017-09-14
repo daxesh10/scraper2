@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="2">
+
+  <testsuite name="linkedinSearchAndApplyTest"
+    errors="0" failures="1" hostname="" id="" package="test" skipped="0"
+    tests="2" time="507.5" timestamp="Tue, 18 Jul 2017 05:41:04 GMT">
+  
+    <testcase name="demo test for scraping pages linkedin" time="302.1" assertions="24">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="demo test for lodding pages linkedin" time="205.3" assertions="16">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;#login-email&gt; to be present for 2000 milliseconds.">    at loginWithCreds (F:\presentation\pages\linkedinApplyPage.js:49:30)
+    at ApplyLinkedin.firebaseClient.firebaseGetRecentSearch.global (F:\presentation\pages\linkedinApplyPage.js:135:16)
+    at F:\presentation\firebaseClient.js:102:12
+    at Object.firebaseGetRecentSearch (F:\presentation\firebaseClient.js:89:5)</failure>
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>

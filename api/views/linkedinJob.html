@@ -1,0 +1,88 @@
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="linkedin">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" style="width: 200px;height: 5%;">SCRAPER linkedin</span>
+  </div>
+</div>
+
+<br>
+<br>
+<hr class="shadow">
+<br>
+<br>
+
+{{data}}
+
+<code>{{error}}</code>
+<!--form page-->
+
+    <div class="w3-row-padding">
+    
+    <div class="w3-col m3">
+      <label><i class="fa fa-calendar-o"></i>linkedin Email </label>
+      <input class="w3-input w3-border" ng-model="linkedinEmail" type="text" placeholder="linkedin email eg. alice@gmail.com">
+    </div>
+
+       <div class="w3-col m3">
+      <label><i class="fa fa-calendar-o"></i> Password </label>
+      <input class="w3-input w3-border" ng-model="linkedinPass" type="password" placeholder="password">
+    </div>
+
+    </div>
+
+    <br>
+    <br>
+    
+    <div class="w3-row-padding">
+    
+    <div class="w3-col m3">
+      <label><i class="fa fa-calendar-o"></i> job title </label>
+      <input class="w3-input w3-border" ng-model="linkedinJobTitle" type="text" placeholder="title eg. web developer">
+    </div>
+
+       <div class="w3-col m3">
+      <label><i class="fa fa-calendar-o"></i> location </label>
+      <input class="w3-input w3-border" ng-model="linkedinJobLocation" type="text" placeholder="location eg. los angeles">
+    </div>
+
+     <div class="w3-col m3">
+      <label><i class="fa fa-calendar-o"></i>No pages </label>
+      <input class="w3-input w3-border" ng-model="linkedinPages" type="text" placeholder="no of pages to scrap default 21.">
+    </div>
+
+    </div> 
+
+    <div class="w3-row-padding">
+    
+      <div class="w3-col m3">
+      <label><i class="fa fa-calendar-o"></i>phone </label>
+      <input class="w3-input w3-border" ng-model="linkedinPhone" type="text" placeholder="phone no.">
+    </div>
+
+      <div class="w3-col m3">
+      <label><i class="fa fa-calendar-o"></i>Resume path </label>
+      <input class="w3-input w3-border" ng-model="resumePath" type="text" placeholder="resume path eg. F:/resume.docx">
+    </div>
+    
+    </div> 
+
+    <br>
+    <br>
+    <div class="w3-col m2">
+      <label><i class="fa fa-search"></i> search</label>
+      <button class="w3-button w3-block w3-black" ng-click="linkedinSearch(linkedinEmail,linkedinPass,linkedinJobTitle,linkedinJobLocation,linkedinPages)">search</button>
+    
+      
+      
+      <br>
+      <label><i class="fa fa-search"></i> search and apply</label>
+      <button class="w3-button w3-block w3-black" ng-click="linkedinSearch(linkedinEmail,linkedinPass,linkedinJobTitle,linkedinJobLocation,linkedinPages,linkedinPhone,resumePath)">search and apply</button>
+    
+
+    </div>
+    
+<!--end of from-->
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br>

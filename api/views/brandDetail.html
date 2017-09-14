@@ -1,0 +1,27 @@
+
+<pre ng-repeat="de in det track by $index" ng-if="de.name">
+    
+<table class="table table-bordered">
+<tr><td><h3> name : {{de.name}} </h3></td></tr>
+<tr><td><h3> mapLink : <a ng-href="de.mapLink" >{{de.mapLink}}</a></h3></td></tr>
+<tr><td><h3> cardUrl : <p ng-repeat="cardUrl in de.cardUrls"><a ng-href="cardUrl" >{{cardUrl}}</a></h3></td></tr>
+
+<br>
+<br>
+<tr><td ng-init="de.jsonShow=true"><a ng-click="de.jsonShow = !de.jsonShow"> #JSON  :</a> <p ng-show="de.jsonShow">{{de | json}}</p> </h3></td></tr>
+<br>
+
+</table>
+
+
+<div ng-repeat="card in de.card">
+    <h3>title: {{card.cardTitle}}</h3>
+    <h3>cardLink: {{card.cardLink}}</h3>
+    <img ng-src="{{card.cardImgUrl}}" alt={{card.cardTitle}}/>
+</div>
+<div>
+   
+<img ng-src="{{de.image}}" style="max-width: 400px;max-width: 400px" alt="{{de.name}}" />
+</div>
+
+</pre>

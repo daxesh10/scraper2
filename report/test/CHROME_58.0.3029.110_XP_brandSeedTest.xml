@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="brandSeedTest"
+    errors="0" failures="0" hostname="" id="" package="test" skipped="0"
+    tests="1" time="10.02" timestamp="Tue, 20 Jun 2017 22:39:24 GMT">
+  
+    <testcase name="Doctors brand Indica " time="10.02" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>
