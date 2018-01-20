@@ -71,7 +71,7 @@ linkedinPage.prototype = {
                 this.browser.click("#login-submit",response=>{
                     console.log(" checking credentials ")
                 });
-               this.browser.maximizeWindow();
+                this.browser.maximizeWindow();
 
 
 
